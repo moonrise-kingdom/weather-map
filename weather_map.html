@@ -3,8 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>WEATHER MAP PROJECT - MOONRISE KINGDOM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
+
+<div class="container bg-info">
+    <h1 class ="display-4 text-center bg-primary">WEATHER MAP - MOONRISE KINGDOM</h1>
+
+<div class="row">
+    <div class="col border text-center">
+        <h1 id="temp1 text-center">temp</h1>
+        <i id="icon1 text-center"></i>
+        <h3 id="weather1 text-center"></h3>
+        <h3 id="humidity1 text-center"></h3>
+        <h3 id="wind1 text-center"></h3>
+        <h3 id="pressure1 text-center"></h3>
+    </div>
+    <div class="col border text-center">
+        <h1 id="temp2 text-center">temp</h1>
+        <i id="icon2 text-center"></i>
+        <h3 id="weather2 text-center"></h3>
+        <h3 id="humidity2 text-center"></h3>
+        <h3 id="wind2 text-center"></h3>
+        <h3 id="pressure2 text-center"></h3>
+    </div>
+    <div class="col border text-center">
+        <h1 id="temp3 text-center">temp</h1>
+        <i id="icon3 text-center"></i>
+        <h3 id="weather3 text-center"></h3>
+        <h3 id="humidity3 text-center"></h3>
+        <h3 id="wind3 text-center"></h3>
+        <h3 id="pressure3 text-center"></h3>
+    </div>
+</div>
+
+
+
+
+
+
+
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script>
+
+   var response =  $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/29.4241,-98.4936");
+    console.log(response);
+    // $.get(response).done(function(data) {
+    //     console.log(data);
+    // });
+</script>
 
 </body>
 </html>
